@@ -7,7 +7,8 @@
 ### 1. Проверка структуры
 
 ```bash
-cd /home/fessan/pro/ai-dev
+PROJECT_DIR="/path/to/ai-dev"
+cd "$PROJECT_DIR"
 
 # Проверь что все файлы на месте
 ls -la
@@ -88,9 +89,15 @@ ls -la .claude/agents/
 **Создай тестовую папку:**
 
 ```bash
+PROJECT_DIR="/path/to/ai-dev"
 mkdir /tmp/test-ai-dev
-cp -r /home/fessan/pro/ai-dev/* /tmp/test-ai-dev/
-cp -r /home/fessan/pro/ai-dev/.* /tmp/test-ai-dev/ 2>/dev/null || true
+
+# Вариант A: чистая копия без .git (проверка "с нуля")
+cp -r "$PROJECT_DIR"/* /tmp/test-ai-dev/
+
+# Вариант B: копия с .git (проверка существующего репозитория)
+# cp -r "$PROJECT_DIR"/.* /tmp/test-ai-dev/ 2>/dev/null || true
+
 cd /tmp/test-ai-dev
 ```
 
@@ -127,10 +134,11 @@ cd /tmp/test-ai-dev
 cat .claude/guides/project.md
 cat .claude/guides/architecture.md
 
-# Проверь что git инициализирован
-git log
+# Если .git не было — git должен быть инициализирован
+# Если .git уже был — /init-project не должен переинициализировать репозиторий
+git log --oneline
 
-# Должен быть коммит: "feat: initial project setup"
+# Должен появиться новый коммит с настройкой проекта (если коммиты отсутствовали)
 ```
 
 ---
