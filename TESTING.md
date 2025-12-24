@@ -325,11 +325,10 @@ cat .claude/guides/architecture.md
 **Если есть доступ к Codex CLI:**
 
 1. Открой проект в Codex
-2. Скажи: "Прочитай INSTRUCTIONS.md"
-3. Попробуй: "Расскажи о проекте"
+2. Попробуй: "Расскажи о проекте"
 
 **Что должно произойти:**
-- Codex прочитает INSTRUCTIONS.md
+- Codex прочитает `AGENTS.md` и `INSTRUCTIONS.md`
 - Поймёт правила
 - Прочитает guides
 - Расскажет о проекте
@@ -373,7 +372,7 @@ cat .claude/guides/architecture.md
 
 ✅ **Универсальность:**
 - Работает в Claude Code
-- Работает в Codex CLI через INSTRUCTIONS.md
+- Работает в Codex CLI через `AGENTS.md` и `INSTRUCTIONS.md`
 
 ---
 
