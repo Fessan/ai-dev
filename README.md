@@ -58,10 +58,14 @@ cd my-project
 ai-dev/
 │
 ├── INSTRUCTIONS.md              # 🎯 Точка входа для любого ИИ
+├── CLAUDE.md                    # 🤖 Правила для Claude (sync)
 ├── DECISIONS.md                 # 📋 Лог архитектурных решений (автообновляется)
 ├── README.md                    # 📖 Эта инструкция
 ├── .gitignore
 ├── .env.example
+├── .cursorrules                 # 🧭 Правила для Cursor (sync)
+├── .antigravity/                # 🧭 Правила для Antigravity (sync)
+│   └── rules.md
 │
 ├── .claude/
 │   ├── guides/                  # 🧭 База знаний проекта (5 guides)
@@ -93,6 +97,10 @@ ai-dev/
 ├── docs/                        # 📄 Документация
 │   ├── plans.md                 # Журнал ПРД (ссылки)
 │   └── templates/               # Шаблоны
+│
+├── rules/                       # 📘 Единый источник правил (sync)
+│   ├── core.md
+│   └── workflow.md
 │
 ├── work/                        # 🚧 Рабочие папки для фич
 │   └── YYYY-MM-DD--feature/
@@ -182,6 +190,17 @@ PRD и планы реализации хранятся в `work/YYYY-MM-DD--fea
 - Ограничения
 
 **Guides автоматически обновляются** ИИ после значимых действий.
+
+## Rules Sync (единый источник правил)
+
+Источник истины: `rules/core.md` и `rules/workflow.md`.
+Эти правила должны быть отражены в:
+- `AGENTS.md`
+- `INSTRUCTIONS.md`
+- `CLAUDE.md`
+- `.cursorrules`
+- `.antigravity/rules.md`
+Любые изменения в `rules/` требуют синхронизации всех этих файлов.
 
 ## Дополнительные skills
 

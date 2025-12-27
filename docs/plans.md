@@ -8,7 +8,8 @@ PRD и планы реализации хранятся в `work/YYYY-MM-DD--fea
 
 | Фича | Source PRD | ПРД | План | Статус | Дата начала |
 |------|------------|-----|------|--------|-------------|
-| - | - | - | - | - | - |
+| Remove project-development skill | - | work/2025-12-27--remove-project-development-skill/prd.md | - | В планировании | 2025-12-27 |
+| Rules sync for assistants | - | work/2025-12-27--rules-sync/prd.md | - | В планировании | 2025-12-27 |
 
 ## Завершённые фичи
 
