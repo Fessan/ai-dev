@@ -1,23 +1,37 @@
 # Claude Instructions (Synced)
 
-This file is synced from `rules/lite.md`.
+Synced from `rules/lite.md`.
 
 ## Quick Start
-1. Read `INSTRUCTIONS.md`
-2. Read `context.md` for stack, commands, structure
-3. If unclear, ask and wait
+1. Read `context.md` for stack, commands, structure
+2. If unclear, ask and wait
+3. Do
+
+## Boundaries
+
+### ✅ Always
+- Read `context.md` before work
+- Check existing code before changes
+- Validate inputs
+
+### ⚠️ Ask first
+- Config changes
+- Adding dependencies
+- Deleting files
+
+### 🚫 Never
+- Hardcode secrets
+- Commit `.env`
+- Assume stack without reading files
 
 ## Rules
-- Simple task (1-3 files): clarify if needed → code
+- Simple task (1-3 files): clarify → code
 - Complex task: mini-plan → approval → code
 - Tests required for: payments, auth, user data
-- Tests optional for: CRUD, UI, utilities
 
-## Agents (on request)
-- `code-developer` — development
-- `code-reviewer` — review
-- `security-auditor` — security audit
-- `secret-scanner` — secrets check
+## Additional Context
+- `.claude/agents/*.md` — agents (TDD, review, security)
+- `.claude/skills/*/SKILL.md` — skills library
 
 ## Principles
 - **KISS** — simplicity first
