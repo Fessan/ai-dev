@@ -13,7 +13,10 @@ Boundaries:
 Rules:
 - Simple task (1-3 files): clarify → code
 - Complex task: mini-plan → approval → code
-- Tests required for: payments, auth, user data
+
+TDD (required for code):
+RED (failing test) → verify fails → GREEN (minimal code) → verify passes → refactor
+Exceptions: configs, docs, small fixes
 
 Additional context:
 - .claude/agents/*.md — agents

@@ -29,7 +29,15 @@ Synced from `rules/lite.md`.
 ## Rules
 - Simple task (1-3 files): clarify → code
 - Complex task: mini-plan → approval → code
-- Tests required for: payments, auth, user data
+
+## TDD (required for code)
+1. Write failing test (RED)
+2. Run — verify it fails
+3. Write minimal code (GREEN)
+4. Run — verify it passes
+5. Refactor if needed
+
+**Exceptions**: configs, docs, small fixes
 
 ## Additional Context
 - `.claude/agents/*.md` — agents (TDD, review, security)
