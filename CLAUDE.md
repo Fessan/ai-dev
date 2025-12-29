@@ -13,6 +13,8 @@ Synced from `rules/lite.md`.
 - Read `context.md` before work
 - Check existing code before changes
 - Validate inputs
+- **Number questions** — so user can reply with just a number
+- **Show agent/skill** — state which agent and skill you're using
 
 ### ⚠️ Ask first
 - Config changes

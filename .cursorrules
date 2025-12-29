@@ -6,7 +6,7 @@ Quick Start:
 3. Do
 
 Boundaries:
-✅ Always: read context.md, check existing code, validate inputs
+✅ Always: read context.md, check existing code, validate inputs, number questions, show agent/skill
 ⚠️ Ask first: config changes, adding dependencies, deleting files
 🚫 Never: hardcode secrets, commit .env, assume stack
 
