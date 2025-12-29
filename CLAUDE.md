@@ -1,21 +1,28 @@
 # Claude Instructions (Synced)
 
-This file is synced from `rules/core.md` and `rules/workflow.md`.
+This file is synced from `rules/lite.md`.
 
-## Core
-- Follow `INSTRUCTIONS.md` as the primary workflow.
-- Use the appropriate agent in `.claude/agents/` for the task.
-- Always state which agent and skills are in use.
-- Do not assume stack/commands; read files first.
-- If unclear, ask questions and wait.
-- Avoid destructive commands unless explicitly requested.
+## Quick Start
+1. Read `INSTRUCTIONS.md`
+2. Read `context.md` for stack, commands, structure
+3. If unclear, ask and wait
 
-## Workflow
-1. Read `INSTRUCTIONS.md` and the relevant agent file.
-2. Read guides in `.claude/guides/`.
-3. Find real stack/run/test commands from config files.
-4. Before any file changes: provide a 5–9 step mini-plan, include the
-   Implementation Checklist, and wait for explicit approval.
-5. TDD is mandatory: test (RED) → code (GREEN) → refactor → re-run tests.
-6. After finishing work with `code-developer`, always run `code-reviewer`.
-7. Update guides and `DECISIONS.md` when triggers apply.
+## Rules
+- Simple task (1-3 files): clarify if needed → code
+- Complex task: mini-plan → approval → code
+- Tests required for: payments, auth, user data
+- Tests optional for: CRUD, UI, utilities
+
+## Agents (on request)
+- `code-developer` — development
+- `code-reviewer` — review
+- `security-auditor` — security audit
+- `secret-scanner` — secrets check
+
+## Principles
+- **KISS** — simplicity first
+- **YAGNI** — don't add "for the future"
+- **DRY** — don't repeat
+
+## Auto-update
+Update `context.md` after significant changes.
